@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="C:\Users\shake\source\repos\2ndpetappupdate.vb" Link="2ndpetappupdate.vb" />
     <Compile Include="Use9.3.24" />
   </ItemGroup>
 
