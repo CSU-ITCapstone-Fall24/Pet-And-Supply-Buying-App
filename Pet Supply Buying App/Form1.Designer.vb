@@ -1,6 +1,11 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Public Class Form1
     Inherits System.Windows.Forms.Form
+
+
+
+
+
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -24,12 +29,23 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Titlelabel = New Label()
         Sloganlabel = New Label()
-        AddToCartButton = New Button()
         ClearButton = New Button()
         ChihuahuaRadioButton1 = New RadioButton()
         YorkieRadioButton2 = New RadioButton()
         ShihTzuRadioButton3 = New RadioButton()
         BreedSelectionGroupBox1 = New GroupBox()
+        TotalPriceDisplayLabel3 = New Label()
+        TotalPriceDisplayLabel1 = New Label()
+        RemoveButton1 = New Button()
+        PNBDishesLabel2 = New Label()
+        PNBDishesRadioButton2 = New RadioButton()
+        PNBDewormerLabel3 = New Label()
+        AddToCartButton = New Button()
+        PNBDewormerRadioButton2 = New RadioButton()
+        IncludesshampooandconditionerLabel3 = New Label()
+        PNBShampooLabel2 = New Label()
+        PNBShampooRadioButton2 = New RadioButton()
+        DisplayTotalPriceLabel2 = New Label()
         QuantityTextBox1 = New TextBox()
         QuantityLabel1 = New Label()
         FrenchBulldogPriceLabel1 = New Label()
@@ -39,16 +55,16 @@ Partial Class Form1
         ChiPriceLabel1 = New Label()
         RadioButton1 = New RadioButton()
         CaneCorsoRadioButton1 = New RadioButton()
-        RemoveButton1 = New Button()
-        Label1 = New Label()
-        DisplayTotalPriceLabel2 = New Label()
+        Label2 = New Label()
+        lstCart = New ListBox()
+        priceLabel1 = New Label()
         BreedSelectionGroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
         ' Titlelabel
         ' 
         Titlelabel.AutoSize = True
-        Titlelabel.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
+        Titlelabel.Font = New Font("Segoe UI", 20.0F, FontStyle.Bold)
         Titlelabel.Location = New Point(348, 9)
         Titlelabel.Name = "Titlelabel"
         Titlelabel.Size = New Size(566, 37)
@@ -58,25 +74,16 @@ Partial Class Form1
         ' Sloganlabel
         ' 
         Sloganlabel.AutoSize = True
-        Sloganlabel.Font = New Font("Segoe UI", 12F)
+        Sloganlabel.Font = New Font("Segoe UI", 12.0F)
         Sloganlabel.Location = New Point(396, 55)
         Sloganlabel.Name = "Sloganlabel"
         Sloganlabel.Size = New Size(440, 21)
         Sloganlabel.TabIndex = 1
         Sloganlabel.Text = "Purchase Your Furby Baby and Supplies At The Same Time!😊"
         ' 
-        ' AddToCartButton
-        ' 
-        AddToCartButton.Location = New Point(36, 658)
-        AddToCartButton.Name = "AddToCartButton"
-        AddToCartButton.Size = New Size(92, 23)
-        AddToCartButton.TabIndex = 2
-        AddToCartButton.Text = "Add To Cart"
-        AddToCartButton.UseVisualStyleBackColor = True
-        ' 
         ' ClearButton
         ' 
-        ClearButton.Location = New Point(1005, 658)
+        ClearButton.Location = New Point(451, 289)
         ClearButton.Name = "ClearButton"
         ClearButton.Size = New Size(75, 23)
         ClearButton.TabIndex = 3
@@ -118,8 +125,20 @@ Partial Class Form1
         ' 
         ' BreedSelectionGroupBox1
         ' 
+        BreedSelectionGroupBox1.Controls.Add(priceLabel1)
+        BreedSelectionGroupBox1.Controls.Add(TotalPriceDisplayLabel3)
+        BreedSelectionGroupBox1.Controls.Add(TotalPriceDisplayLabel1)
+        BreedSelectionGroupBox1.Controls.Add(RemoveButton1)
+        BreedSelectionGroupBox1.Controls.Add(ClearButton)
+        BreedSelectionGroupBox1.Controls.Add(PNBDishesLabel2)
+        BreedSelectionGroupBox1.Controls.Add(PNBDishesRadioButton2)
+        BreedSelectionGroupBox1.Controls.Add(PNBDewormerLabel3)
+        BreedSelectionGroupBox1.Controls.Add(AddToCartButton)
+        BreedSelectionGroupBox1.Controls.Add(PNBDewormerRadioButton2)
+        BreedSelectionGroupBox1.Controls.Add(IncludesshampooandconditionerLabel3)
+        BreedSelectionGroupBox1.Controls.Add(PNBShampooLabel2)
+        BreedSelectionGroupBox1.Controls.Add(PNBShampooRadioButton2)
         BreedSelectionGroupBox1.Controls.Add(DisplayTotalPriceLabel2)
-        BreedSelectionGroupBox1.Controls.Add(Label1)
         BreedSelectionGroupBox1.Controls.Add(QuantityTextBox1)
         BreedSelectionGroupBox1.Controls.Add(QuantityLabel1)
         BreedSelectionGroupBox1.Controls.Add(FrenchBulldogPriceLabel1)
@@ -134,14 +153,127 @@ Partial Class Form1
         BreedSelectionGroupBox1.Controls.Add(YorkieRadioButton2)
         BreedSelectionGroupBox1.Location = New Point(12, 185)
         BreedSelectionGroupBox1.Name = "BreedSelectionGroupBox1"
-        BreedSelectionGroupBox1.Size = New Size(250, 318)
+        BreedSelectionGroupBox1.Size = New Size(556, 318)
         BreedSelectionGroupBox1.TabIndex = 7
         BreedSelectionGroupBox1.TabStop = False
-        BreedSelectionGroupBox1.Text = "Breed Selection"
+        BreedSelectionGroupBox1.Text = "Breed Selection N Supplies"
+        ' 
+        ' TotalPriceDisplayLabel3
+        ' 
+        TotalPriceDisplayLabel3.AutoSize = True
+        TotalPriceDisplayLabel3.Location = New Point(91, 252)
+        TotalPriceDisplayLabel3.Name = "TotalPriceDisplayLabel3"
+        TotalPriceDisplayLabel3.Size = New Size(36, 15)
+        TotalPriceDisplayLabel3.TabIndex = 26
+        TotalPriceDisplayLabel3.Text = "Price "
+        ' 
+        ' TotalPriceDisplayLabel1
+        ' 
+        TotalPriceDisplayLabel1.AutoSize = True
+        TotalPriceDisplayLabel1.Location = New Point(15, 252)
+        TotalPriceDisplayLabel1.Name = "TotalPriceDisplayLabel1"
+        TotalPriceDisplayLabel1.Size = New Size(64, 15)
+        TotalPriceDisplayLabel1.TabIndex = 18
+        TotalPriceDisplayLabel1.Text = "Total Price:"
+        ' 
+        ' RemoveButton1
+        ' 
+        RemoveButton1.Location = New Point(213, 289)
+        RemoveButton1.Name = "RemoveButton1"
+        RemoveButton1.Size = New Size(113, 23)
+        RemoveButton1.TabIndex = 8
+        RemoveButton1.Text = "Remove Item"
+        RemoveButton1.UseVisualStyleBackColor = True
+        ' 
+        ' PNBDishesLabel2
+        ' 
+        PNBDishesLabel2.AutoSize = True
+        PNBDishesLabel2.Location = New Point(412, 101)
+        PNBDishesLabel2.Name = "PNBDishesLabel2"
+        PNBDishesLabel2.Size = New Size(68, 15)
+        PNBDishesLabel2.TabIndex = 24
+        PNBDishesLabel2.Text = "$40.99 each"
+        ' 
+        ' PNBDishesRadioButton2
+        ' 
+        PNBDishesRadioButton2.AutoSize = True
+        PNBDishesRadioButton2.Location = New Point(285, 101)
+        PNBDishesRadioButton2.Name = "PNBDishesRadioButton2"
+        PNBDishesRadioButton2.Size = New Size(85, 19)
+        PNBDishesRadioButton2.TabIndex = 23
+        PNBDishesRadioButton2.TabStop = True
+        PNBDishesRadioButton2.Text = "PNB Dishes"
+        PNBDishesRadioButton2.UseVisualStyleBackColor = True
+        ' 
+        ' PNBDewormerLabel3
+        ' 
+        PNBDewormerLabel3.AutoSize = True
+        PNBDewormerLabel3.Location = New Point(412, 74)
+        PNBDewormerLabel3.Name = "PNBDewormerLabel3"
+        PNBDewormerLabel3.Size = New Size(68, 15)
+        PNBDewormerLabel3.TabIndex = 22
+        PNBDewormerLabel3.Text = "$20.99 each"
+        ' 
+        ' AddToCartButton
+        ' 
+        AddToCartButton.Location = New Point(6, 289)
+        AddToCartButton.Name = "AddToCartButton"
+        AddToCartButton.Size = New Size(92, 23)
+        AddToCartButton.TabIndex = 2
+        AddToCartButton.Text = "Add To Cart"
+        AddToCartButton.UseVisualStyleBackColor = True
+        ' 
+        ' PNBDewormerRadioButton2
+        ' 
+        PNBDewormerRadioButton2.AutoSize = True
+        PNBDewormerRadioButton2.Location = New Point(285, 72)
+        PNBDewormerRadioButton2.Name = "PNBDewormerRadioButton2"
+        PNBDewormerRadioButton2.Size = New Size(106, 19)
+        PNBDewormerRadioButton2.TabIndex = 21
+        PNBDewormerRadioButton2.TabStop = True
+        PNBDewormerRadioButton2.Text = "PNB Dewormer"
+        PNBDewormerRadioButton2.UseVisualStyleBackColor = True
+        ' 
+        ' IncludesshampooandconditionerLabel3
+        ' 
+        IncludesshampooandconditionerLabel3.AutoSize = True
+        IncludesshampooandconditionerLabel3.Location = New Point(285, 42)
+        IncludesshampooandconditionerLabel3.Name = "IncludesshampooandconditionerLabel3"
+        IncludesshampooandconditionerLabel3.Size = New Size(241, 15)
+        IncludesshampooandconditionerLabel3.TabIndex = 20
+        IncludesshampooandconditionerLabel3.Text = "Includes  Includes shampoo and conditioner"
+        ' 
+        ' PNBShampooLabel2
+        ' 
+        PNBShampooLabel2.AutoSize = True
+        PNBShampooLabel2.Location = New Point(412, 27)
+        PNBShampooLabel2.Name = "PNBShampooLabel2"
+        PNBShampooLabel2.Size = New Size(68, 15)
+        PNBShampooLabel2.TabIndex = 19
+        PNBShampooLabel2.Text = "$49.99 each"
+        ' 
+        ' PNBShampooRadioButton2
+        ' 
+        PNBShampooRadioButton2.AutoSize = True
+        PNBShampooRadioButton2.Location = New Point(285, 23)
+        PNBShampooRadioButton2.Name = "PNBShampooRadioButton2"
+        PNBShampooRadioButton2.Size = New Size(121, 19)
+        PNBShampooRadioButton2.TabIndex = 18
+        PNBShampooRadioButton2.TabStop = True
+        PNBShampooRadioButton2.Text = "PNB Shampoo Set"
+        PNBShampooRadioButton2.UseVisualStyleBackColor = True
+        ' 
+        ' DisplayTotalPriceLabel2
+        ' 
+        DisplayTotalPriceLabel2.AutoSize = True
+        DisplayTotalPriceLabel2.Location = New Point(79, 204)
+        DisplayTotalPriceLabel2.Name = "DisplayTotalPriceLabel2"
+        DisplayTotalPriceLabel2.Size = New Size(0, 15)
+        DisplayTotalPriceLabel2.TabIndex = 17
         ' 
         ' QuantityTextBox1
         ' 
-        QuantityTextBox1.Location = New Point(72, 163)
+        QuantityTextBox1.Location = New Point(227, 158)
         QuantityTextBox1.Name = "QuantityTextBox1"
         QuantityTextBox1.Size = New Size(66, 23)
         QuantityTextBox1.TabIndex = 15
@@ -149,7 +281,7 @@ Partial Class Form1
         ' QuantityLabel1
         ' 
         QuantityLabel1.AutoSize = True
-        QuantityLabel1.Location = New Point(7, 166)
+        QuantityLabel1.Location = New Point(159, 161)
         QuantityLabel1.Name = "QuantityLabel1"
         QuantityLabel1.Size = New Size(59, 15)
         QuantityLabel1.TabIndex = 14
@@ -222,43 +354,43 @@ Partial Class Form1
         CaneCorsoRadioButton1.Text = "Cane Corso"
         CaneCorsoRadioButton1.UseVisualStyleBackColor = True
         ' 
-        ' RemoveButton1
+        ' Label2
         ' 
-        RemoveButton1.Location = New Point(555, 658)
-        RemoveButton1.Name = "RemoveButton1"
-        RemoveButton1.Size = New Size(113, 23)
-        RemoveButton1.TabIndex = 8
-        RemoveButton1.Text = "Remove Item"
-        RemoveButton1.UseVisualStyleBackColor = True
+        Label2.AutoSize = True
+        Label2.Location = New Point(126, 149)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(41, 15)
+        Label2.TabIndex = 25
+        Label2.Text = "Label2"
         ' 
-        ' Label1
+        ' lstCart
         ' 
-        Label1.AutoSize = True
-        Label1.Location = New Point(9, 204)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(64, 15)
-        Label1.TabIndex = 16
-        Label1.Text = "Total Price:"
+        lstCart.FormattingEnabled = True
+        lstCart.ItemHeight = 15
+        lstCart.Location = New Point(669, 79)
+        lstCart.Name = "lstCart"
+        lstCart.Size = New Size(294, 184)
+        lstCart.TabIndex = 8
         ' 
-        ' DisplayTotalPriceLabel2
+        ' priceLabel1
         ' 
-        DisplayTotalPriceLabel2.AutoSize = True
-        DisplayTotalPriceLabel2.Location = New Point(79, 204)
-        DisplayTotalPriceLabel2.Name = "DisplayTotalPriceLabel2"
-        DisplayTotalPriceLabel2.Size = New Size(0, 15)
-        DisplayTotalPriceLabel2.TabIndex = 17
+        priceLabel1.AutoSize = True
+        priceLabel1.Location = New Point(155, 189)
+        priceLabel1.Name = "priceLabel1"
+        priceLabel1.Size = New Size(41, 15)
+        priceLabel1.TabIndex = 27
+        priceLabel1.Text = "Label1"
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.cute_dog_sleeping_ai_generatedBackgroundImage
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(1163, 690)
-        Controls.Add(RemoveButton1)
+        Controls.Add(lstCart)
         Controls.Add(BreedSelectionGroupBox1)
-        Controls.Add(ClearButton)
-        Controls.Add(AddToCartButton)
+        Controls.Add(Label2)
         Controls.Add(Sloganlabel)
         Controls.Add(Titlelabel)
         Name = "Form1"
@@ -271,7 +403,6 @@ Partial Class Form1
 
     Friend WithEvents Titlelabel As Label
     Friend WithEvents Sloganlabel As Label
-    Friend WithEvents AddToCartButton As Button
     Friend WithEvents ClearButton As Button
     Friend WithEvents ChihuahuaRadioButton1 As RadioButton
     Friend WithEvents YorkieRadioButton2 As RadioButton
@@ -288,6 +419,81 @@ Partial Class Form1
     Friend WithEvents QuantityTextBox1 As TextBox
     Friend WithEvents QuantityLabel1 As Label
     Friend WithEvents DisplayTotalPriceLabel2 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents PNBShampooRadioButton2 As RadioButton
 
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles PNBShampooRadioButton2.CheckedChanged
+
+    End Sub
+
+    Friend WithEvents IncludesshampooandconditionerLabel3 As Label
+    Friend WithEvents PNBShampooLabel2 As Label
+    Friend WithEvents PNBDewormerLabel3 As Label
+    Friend WithEvents PNBDewormerRadioButton2 As RadioButton
+    Friend WithEvents PNBDishesLabel2 As Label
+    Friend WithEvents PNBDishesRadioButton2 As RadioButton
+
+    Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles ClearButton.Click
+
+    End Sub
+
+    Friend WithEvents lstCart As ListBox
+    Friend WithEvents AddToCartButton As Button
+
+    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstCart.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Friend WithEvents TotalPriceDisplayLabel1 As Label
+    Friend WithEvents TotalPriceDisplayLabel3 As Label
+    Friend WithEvents Label2 As Label
+
+    Private Sub AddToCartButton_Click(sender As Object, e As EventArgs) Handles AddToCartButton.Click
+
+        'Add the item and price to total price and listbox to display cost and items
+
+
+        TotalPriceDisplayLabel3.Visible = True
+
+
+        Dim strSelection As String = ""
+        Dim itemName As String = ""
+        Dim quantity As Integer = CInt(numQuantity.Value)
+        Dim price As Decimal = CDec(numPrice.Value)
+
+        'Total Price Calculation
+        Dim totalPrice As Decimal = quantity * price
+
+        'Calculate the total price for this item
+        Dim completeTotalprice As Decimal = quantity * price
+
+        'Add the item to the cart(listbox)
+        lstCart.Items.Add($"{itemName}-{quantity} * {price:C} = {totalPrice:C}")
+
+
+
+
+        'Price total updates
+        UpdateTotal()
+
+
+    End Sub
+
+    Private Sub UpdateTotal()
+        Dim Total As Decimal = 0D
+
+        'Add each item in the cart
+        For Each item As String In lstCart.Items
+            'extract
+            Dim parts() As String = item.Split("="c)
+            Dim itemTotal As Decimal = CDec(parts(1).Trim().Substring(1))
+            Total += itemTotal
+        Next
+        TotalPriceDisplayLabel3.Text = $"Total: {Total:C}"
+    End Sub
+
+    Friend WithEvents priceLabel1 As Label
 End Class
